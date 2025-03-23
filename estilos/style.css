@@ -441,6 +441,8 @@ a{
     transition: background-color 0.3s ease-in-out;
 }
 
+
+
 input, .btn-servicio, textarea {
     width: 25rem;
     height: 3rem;
@@ -450,6 +452,7 @@ input, .btn-servicio, textarea {
     font-family: "Pixelify Sans";
     font-size: 1rem;
 }
+
 
 .selected {
     background-color: #28a745 !important;
@@ -574,4 +577,89 @@ textarea{
     75% { background-image: url('../img/fantasma2.png'); } /* Retroceso: Paso 2 */
     87.5% { background-image: url('../img/fantasma1.png'); } /* Retroceso: Paso 1 */
     100% { background-image: url('../img/fantasma1.png'); } /* Vuelve al inicio */
+}
+
+
+/*Responsive 1440 * 900 */
+
+@media screen and (max-width: 1440px){
+    .contenedor-menu{
+        margin-left: 55rem;
+    }
+
+    .primer{
+        margin-top: -2rem;
+    }
+
+    .texto{
+        margin-top: 8rem;
+        margin-left: 2rem;
+        font-size: 4rem;
+    }
+
+    .img-presentacion{
+        margin-top: -30%;
+    }
+
+    .redes-sociales-presentacion{
+        margin-top: -30%;
+    }
+
+    .redes-sociales-presentacion, p{
+        font-size: 1rem;
+    }
+
+    .frase{
+        margin-top: -3rem;
+        font-size: 0.8rem;
+    }
+    .color-secundario-presentacion{
+        margin-top: -4rem;
+    }
+    .img-flecha{
+        margin-left: 44%;
+        margin-top: 2rem;
+    }
+
+    .quiensoy{
+        top: -9.5rem;
+    }
+
+    .texto-quiensoy{
+        margin-top: 10rem;
+    }
+
+    .imagen-quiensoy{
+        margin-top: 8rem;
+        width: 46%;
+        height: 86%;
+    }
+
+    .color-secundario{
+        margin-top: -1.2rem;
+    }
+
+    .habilidades{
+        top: -5rem;
+    }
+
+    .skills, .proyecto{
+        margin-top: 20rem;
+    }
+
+    .img-skills{
+        width: 103%;
+    }
+
+    .img-proyecto{
+        margin-top: -3rem;
+    }
+
+    .segundo-color-h{
+        margin-top: -8rem;
+    }
+
+    .contactame{
+        margin-top: 15rem;
+    }
 }
