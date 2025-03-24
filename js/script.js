@@ -11,16 +11,47 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+// Verificamos si la resolución es mayor que 1440px
+if (window.innerWidth > 1440) {
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-const panels = gsap.utils.toArray(".panel");
-let observer = null;
+    const panels = gsap.utils.toArray(".panel");
+    let observer = null;
 
-// Habilita ScrollTrigger.normalizeScroll() solo en dispositivos táctiles
-if (ScrollTrigger.isTouch === 1) {
-    observer = ScrollTrigger.normalizeScroll(true);
+    // Habilita ScrollTrigger.normalizeScroll() solo en dispositivos táctiles
+    if (ScrollTrigger.isTouch === 1) {
+        observer = ScrollTrigger.normalizeScroll(true);
+    }
+
+    // Configura ScrollTrigger para cada panel
+    panels.forEach((panel, i) => {
+        ScrollTrigger.create({
+            trigger: panel,
+            start: "top bottom",
+            end: "+=199%",
+            onToggle: (self) => {
+                if (self.isActive && !scrollTween) {
+                    goToSection(i);
+                }
+            }
+        });
+    });
+
+    // Configura el desplazamiento automático por secciones
+    ScrollTrigger.create({
+        start: 0,
+        end: "max",
+        snap: 1 / (panels.length - 1)
+    });
 }
-//
+
+// Añade un condicional para eliminar los eventos de ScrollTrigger si es una resolución menor a 1440px
+else {
+    // Elimina todos los ScrollTriggers si la resolución es menor a 1440px
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const puertas = document.querySelectorAll(".solo-esta");
 
@@ -64,28 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-});
-
-
-// Configura ScrollTrigger para cada panel
-panels.forEach((panel, i) => {
-    ScrollTrigger.create({
-        trigger: panel,
-        start: "top bottom",
-        end: "+=199%",
-        onToggle: (self) => {
-            if (self.isActive && !scrollTween) {
-                goToSection(i);
-            }
-        }
-    });
-});
-
-// Configura el desplazamiento automático por secciones
-ScrollTrigger.create({
-    start: 0,
-    end: "max",
-    snap: 1 / (panels.length - 1)
 });
 
 document.addEventListener("DOMContentLoaded", () => {
