@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS contactame (
     CorreoElectronico VARCHAR(150) NOT NULL,
     Trabajo VARCHAR(100),
     BuscaDe VARCHAR(100),
-    Presupuesto DECIMAL(10,2),
+    Presupuesto VARCHAR(100),
     Detalles TEXT
 );
 
