@@ -31,7 +31,7 @@ window.onload = function() {
     if (urlParams.get('success') === 'true') {
         Swal.fire({
             title: "Enviado correctamente, pronto se comunicaran contigo",
-            imageUrl: "img/catpixel.gif",
+            imageUrl: "https://drive.google.com/file/d/1wOGe3C4n4kKsRrYUajTHzckTMs2B1uy7/view?usp=sharing",
             imageWidth: 300,
             imageHeight: 200,
             imageAlt: "Custom image"
