@@ -396,7 +396,7 @@ a{
         moveRight 20s linear infinite, /* Combina todas las transformaciones */
         play 2s steps(4) infinite; /* Animación de los sprites */
 }
-
+/*
 .contactame{
     margin-top: -9rem;
     background-color: #1E141D;
@@ -453,10 +453,11 @@ input, .btn-servicio, textarea {
     font-size: 1rem;
 }
 
-
+*/
+/*
 .selected {
     background-color: #28a745 !important;
-    color: white !important; /* Cambia el color del texto para mejor visibilidad */
+    color: white !important; 
     font-weight: bold;
 }
 
@@ -493,19 +494,19 @@ textarea{
     width: 6rem;
     cursor: pointer;
 }
-
+*/
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-50rem * 5));
+        transform: translateX(calc(-50rem * 4));
     }
 }
 
 @keyframes scroll2 {
     0% {
-        transform: translateX(calc(-50rem * 5));
+        transform: translateX(calc(-50rem * 4));
     }
     100% {
         transform: translateX(0);
