@@ -978,7 +978,7 @@ a{
         moveRight 20s linear infinite, /* Combina todas las transformaciones */
         play 2s steps(4) infinite; /* Animación de los sprites */
 }
-
+/*
 .contactame{
     margin-top: -9rem;
     background-color: #1E141D;
@@ -1039,7 +1039,8 @@ input, .btn-servicio, textarea {
 .selected {
     background-color: #28a745 !important;
     color: white !important; /* Cambia el color del texto para mejor visibilidad */
-    font-weight: bold;
+/*   
+font-weight: bold;
 }
 
 
@@ -1075,7 +1076,7 @@ textarea{
     width: 6rem;
     cursor: pointer;
 }
-
+*/
 /*@keyframes scroll {
     0% {
         transform: translateX(0);
@@ -1312,9 +1313,10 @@ textarea{
     }
 
 
-
+/*
     .contactame{
         margin-top: 0;
         height: 50rem;
     }
+    */
  }
