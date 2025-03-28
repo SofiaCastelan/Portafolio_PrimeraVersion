@@ -185,6 +185,7 @@
         <div class="pixel-art-animation"></div>
     </div>
 </section>
+    <!--
 <section class="panel" id="4">
     <div class="contactame">
         <div class="titulo-contactame">
@@ -240,5 +241,6 @@
     </div>
 </div>
 </section>
+    -->
 </body>
 </html>
